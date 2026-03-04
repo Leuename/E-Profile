@@ -271,9 +271,11 @@ button {
     padding: 0.9rem 1.8rem;
     border-radius: 4px;
     letter-spacing: 1px;
+    text-decoration: none;
     transition: background 0.2s ease, color 0.2s ease;
     position: relative;
     overflow: hidden;
+    margin-top: 1rem;
 }
 
 .btn-outline::before {
@@ -291,9 +293,17 @@ button {
 }
 
 .btn-outline i,
-.btn-outline {
+.btn-outline span {
     position: relative;
     z-index: 1;
+}
+
+.btn-outline i {
+    transition: transform 0.3s ease;
+}
+
+.btn-outline:hover i {
+    transform: translateX(4px);
 }
 
 .scroll-down {

@@ -134,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
         shutterNav('#home');
     });
 
+    document.querySelectorAll('.btn-outline, .scroll-down').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            shutterNav(btn.getAttribute('href'));
+        });
+    });
+
 
     /* ══════════════════════════════════════════════════
        KEYBOARD NAVIGATION
