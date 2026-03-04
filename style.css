@@ -21,6 +21,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-h);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 *,
@@ -37,6 +39,8 @@ body {
     color: var(--slate);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -1660,15 +1664,19 @@ button {
         font-size: 1.1rem;
     }
 
-    /* Sections — keep content centered */
+    /* Sections — keep content centered, no horizontal overflow */
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     .section {
         padding-left: 0;
         padding-right: 0;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     /* Photo grid — 2 columns, square crop */
