@@ -1701,30 +1701,52 @@ button {
         gap: 2rem;
     }
 
-    /* Fan deck — scaled to mobile */
+    /* Fan deck — scaled to mobile, strict width */
     .fan-deck {
         min-height: 260px;
         padding: 1rem 0;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     .fan-card {
-        width: 120px;
-        height: 170px;
+        width: 110px;
+        height: 160px;
+        margin: 0 -18px;
+        /* Tighter overlap for mobile */
+        transform: translateY(calc(var(--offset-sq) * 2px)) rotate(calc(var(--offset) * 4deg));
+    }
+
+    .fan-deck:hover .fan-card {
+        margin: 0 -5px;
+        /* Don't spread too far on hover */
     }
 
     .fan-deck--sm {
         min-height: 200px;
     }
 
-    /* Interest cards — scaled to mobile */
+    /* Interest cards — scaled to mobile, strict width */
     .interest-fan {
         min-height: 260px;
         padding: 1rem 0;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     .interest-card {
-        width: 130px;
-        height: 180px;
+        width: 110px;
+        height: 160px;
+        margin: 0 -18px;
+        /* Tighter overlap for mobile */
+        transform: translateY(calc(var(--offset-sq) * 2px)) rotate(calc(var(--offset) * 4deg));
+    }
+
+    .interest-fan:hover .interest-card {
+        margin: 0 -5px;
+        /* Don't spread too far on hover */
     }
 
     /* Hero text */
