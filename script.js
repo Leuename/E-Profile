@@ -189,7 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollY = window.scrollY;
 
     window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
-    window.addEventListener('click', e => { RIPPLES.push({ x: e.clientX, y: e.clientY, r: 0, life: 1 }); });
+    if (window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('click', e => { RIPPLES.push({ x: e.clientX, y: e.clientY, r: 0, life: 1 }); });
+    }
     window.addEventListener('scroll', () => {
         const dy = window.scrollY - lastScrollY;
         lastScrollY = window.scrollY;
